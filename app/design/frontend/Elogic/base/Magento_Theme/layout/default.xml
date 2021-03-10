@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="web/css/all.min.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+
+        <referenceBlock name="top.links"  remove="true"/>
+        <referenceBlock name="header.container"  remove="true"/>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            </arguments>
+        </referenceBlock>
+
+
+        <referenceContainer name="header.container">
+            <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="left-col"/>
+            <container name="header.center" label="headerCenter" htmlTag="div" htmlClass="center-col"/>
+            <container name="header.right" label="headerRight" htmlTag="div" htmlClass="right-col"/>
+        </referenceContainer>
+        <!-- Move -->
+        <move element="logo" destination="header.center" />
+        <move element="top.search" destination="header.left" />
+        <move element="minicart" destination="header.right" />
+    </body>
+</page>
