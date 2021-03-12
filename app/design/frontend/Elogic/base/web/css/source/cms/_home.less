@@ -3,9 +3,14 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    body {
-        background-color: #00ade2;
-
+    .main-slider-wrap{
+        margin-left: ~'-calc(50% - 50vw)';
+        margin-right: ~'-calc(50% - 50vw)';
+        height: 100vh;
+        margin: 0;
+        .slick-track, div{
+            height: 100%;
+        }
     }
 }
 

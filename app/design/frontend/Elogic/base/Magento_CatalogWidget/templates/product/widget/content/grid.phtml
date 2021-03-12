@@ -25,10 +25,11 @@ use Magento\Framework\App\Action\Action;
     <div class="block widget block-products-list <?= /* @noEscape */ $mode ?>">
         <?php if ($block->getTitle()) : ?>
             <div class="block-title">
-                <strong><?= $block->escapeHtml(__($block->getTitle())) ?></strong>
+                <h2><?= $block->escapeHtml(__($block->getTitle())) ?></h2>
+                <div class="block-title-sub">most trendy furniture</div>
             </div>
         <?php endif ?>
-        <div class="block-content 4567457456-345">
+        <div class="block-content">
             <?= /* @noEscape */ '<!-- ' . $image . '-->' ?>
             <div class="products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>">
                 <ol class="product-items <?= /* @noEscape */ $type ?>" data-mage-init='{"mywidget":{}}'>
