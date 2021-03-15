@@ -26,20 +26,19 @@
     * {
         transition: all .4s ease;
     }
-
     .products {
         margin: @indent__l 0;
     }
 
     .block-title {
         h2 {
-            font-size: 24px;
-            font-weight: 600;
+            .lib-css(font-size, 24);
+            .lib-css(font-weight, @font-weight__semibold);
             letter-spacing: 1px;
         }
 
         &-sub {
-            font-size: 14px;
+            .lib-css(font-size, 14);
             text-transform: uppercase;
         }
     }
@@ -150,7 +149,7 @@
                             line-height: 43px;
                             height: 43px;
                             width: 60px;
-                            font-size: 16px;
+                            .lib-css(font-size, 16);
                             border-radius: 0;
                             margin: 0 auto;
                             text-align: center;
