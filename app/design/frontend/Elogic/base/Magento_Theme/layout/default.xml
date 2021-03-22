@@ -7,7 +7,7 @@
     <body>
         <!-- Header -->
 
-        <referenceBlock name="top.links"  remove="true"/>
+<!--        <referenceBlock name="top.links"  remove="true"/>-->
         <referenceBlock name="header.container"  remove="true"/>
         <referenceBlock name="logo">
             <arguments>
@@ -25,5 +25,21 @@
         <move element="logo" destination="header.center" />
         <move element="top.search" destination="header.left" />
         <move element="minicart" destination="header.right" />
+
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="my-footer-menu">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">my-footer-menu</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="my-footer-social">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">my-footer-social</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="footer_links"  remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+        </referenceContainer>
     </body>
 </page>

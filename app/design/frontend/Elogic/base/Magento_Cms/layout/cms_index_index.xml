@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="full-columns" htmlTag="div" htmlClass="full-columns" before="main.content">
+                <container name="full-main" label="Custom Main Content Container" htmlTag="div" htmlClass="column main"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="full-main">
+            <container name="contact" label="Home Slider Container" htmlTag="div" htmlClass="contact-block" />
+        </referenceContainer>
+
+        <referenceContainer name="content" >
+            <block class="Magento\Cms\Block\Block" name="image-block">
+                <arguments>
+                    <argument name="image-block" xsi:type="string">my-image-block</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="slider-home" template="Magento_Theme::carousel.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

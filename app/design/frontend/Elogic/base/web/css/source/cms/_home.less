@@ -3,16 +3,180 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+    li{
+        list-style: none;
+    }
+    a {
+        text-transform: uppercase;
+    }
+    h1,h2,h3,h4,h5,h6{
+        text-transform: uppercase;
+    }
+
     .main-slider-wrap{
-        margin-left: ~'-calc(50% - 50vw)';
-        margin-right: ~'-calc(50% - 50vw)';
         height: 100vh;
         margin: 0;
+        .slick-slide{
+            position: relative;
+        }
         .slick-track, div{
             height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .my-image-block {
+        display: flex;
+        & > div {
+            position: relative;
+            padding: 0 15px;
+        }
+    }
+    .block-product-link a,
+    .block-category-link a {
+        position: absolute;
+        text-transform: uppercase;
+        left: 20%;
+        bottom: 20%;
+        .lib-css(color, @color-elogic-black1);
+        .lib-link(
+            @_link-text-decoration: underline,
+            @_link-text-decoration-hover: none
+        );
+    }
+
+    .full-columns{
+        margin-bottom: 50px;
+    }
+
+    .newsletter{
+        margin-bottom: 0;
+    }
+
+    //Footer
+    .page-footer{
+        a {
+            //.lib-link(
+            //    @_link-color: @color-elogic-gray1,
+            //    @_link-color-hover: @color-elogic-black1,
+            //    @_link-text-decoration-hover: none
+            //);
+            overflow: hidden;
+            .lib-css(color, @color-elogic-gray1);
+                &:hover {
+                    .lib-css(color, @color-elogic-black1);
+                    .lib-css(text-decoration, none);
+
+                }
+        }
+    }
+    .footer-container{
+        display: flex;
+        padding: 100px 15px 68px;
+        background-color: #fff;
+    }
+    .footer-block{
+        width: 25%;
+        overflow: hidden;
+        ul {
+            margin: 0;
+            padding: 0;
+            li{
+                a {
+                    position: relative;
+                    padding: 0 10px 0 0;
+                    text-transform: capitalize;
+
+                    &::before {
+                        content: "\f111";
+                        font-family: FontAwesome;
+                        speak: none;
+                        font-style: normal;
+                        font-weight: 400;
+                        color: #888;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-size: 7px;
+                        position: absolute;
+                        top: 50%;
+                        left: -15px;
+                        -webkit-transform: translateY(-65%);
+                        -moz-transform: translateY(-65%);
+                        transform: translateY(-65%);
+                        -webkit-transition: left .25s cubic-bezier(.54,.49,0,1.75);
+                        -moz-transition: left .25s cubic-bezier(.54,.49,0,1.75);
+                        transition: left .25s cubic-bezier(.54,.49,0,1.75);
+                    }
+                }
+                &:hover {
+                    a{
+                        padding: 0 5px 0 15px;
+                        &::before{
+                            left: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-sub {
+        display: flex;
+        padding: 40px 0;
+        background: #fff;
+        border-top: 1px solid @color-elogic-gray1;
+        .lib-css(font-weight, @font-weight__light);
+        &-list{
+            width: 50%;
+            display: flex;
+            li {
+                padding: 0 20px 0 5px;
+            }
+
+        }
+        &-social{
+            width: 50%;
+            display: flex;
+            span {
+                padding-right: 30px;
+                text-transform: uppercase;
+            }
+            ul {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding: 0 20px 0 5px;
+                    .fa {
+                        font-family: FontAwesome;
+                    }
+                    .fa-behance:before {
+                        content: "\f1b4";
+                    }
+                    .fa-facebook:before {
+                        content: "\f39e";
+                    }
+                    .fa-google:before {
+                        content: "\f1a0";
+                    }
+                    .fa-skype:before {
+                        content: "\f17e";
+                    }
+                    .fa-twitter:before {
+                        content: "\f099";
+                    }
+                }
+            }
+
         }
     }
 }
+
 
 //
 //  Desktop

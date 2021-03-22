@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+            <container name="elogic.newsletter.popup" htmlTag="div" htmlId="elogic-newsletter-popup">
+                <block class="Magento\Customer\Block\Newsletter" name="customer_newsletter" cacheable="false">
+                    <container name="customer.newsletter.form.before" as="form_before" label="Newsletter Subscription Form Before" htmlTag="div" htmlClass="rewards"/>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
+
