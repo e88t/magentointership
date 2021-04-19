@@ -1,0 +1,72 @@
+//
+//  Variables
+//  _____________________________________________
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .product {
+        &.photo {
+            &.product-item-photo-hover {
+                display: none;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-image-photo-hover {
+        border: 0;
+        bottom: 0;
+        display: block;
+        height: auto;
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .products-grid {
+        .products.products-with-hover {
+            .product-item {
+                &:not(:hover) {
+                    &:not(.active) {
+                        .product-item-photo {
+                            display: block;
+                        }
+
+                        .product-item-photo-hover {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .product-item-info {
+                &:hover,
+                &.active {
+                    .product-item-photo {
+                        display: none;
+                    }
+
+                    .product-item-photo-hover {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

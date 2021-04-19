@@ -12,12 +12,28 @@
         </referenceContainer>
 
         <referenceContainer name="content" >
-            <block class="Magento\Cms\Block\Block" name="image-block">
-                <arguments>
-                    <argument name="image-block" xsi:type="string">my-image-block</argument>
-                </arguments>
-            </block>
-            <block class="Magento\Framework\View\Element\Template" name="slider-home" template="Magento_Theme::carousel.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="slider-home" template="Magento_Cms::carousel.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="my-tripple-slider" template="Magento_Cms::tripple-carousel.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="my-news-blog" template="Magento_Cms::news-blog.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="my-bands-block" template="Magento_Cms::brands.phtml"/>
+
+            <container name="subscription.popup.wrapper" label="Subscription Popup Wrapper" htmlTag="div" htmlId="my-custom-popup">
+                <block class="Elogic\NewslatterSubscription\Block\IsCustomerSubscribed" name="my-subscription-popup" template="Magento_Cms::subscription.phtml" />
+                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" template="Magento_Newsletter::subscribe.phtml"/>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="content.bottom">
+            <container name="newsletter-section" htmlTag="div" htmlClass="newsletters container" before="footer">
+                <container name="newsletter-section-wrapper"  htmlTag="div" htmlClass="newslatter-wrapper" >
+                    <block class="Magento\Cms\Block\Block" name="my-custom-newsletter">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">my-custom-newsletter</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Newsletter\Block\Subscribe" name="homepage.form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" />
+                </container>
+            </container>
         </referenceContainer>
     </body>
 </page>
+

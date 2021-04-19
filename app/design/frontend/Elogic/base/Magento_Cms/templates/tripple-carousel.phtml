@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Backend\Block\System\Store\Edit $block */
+
+?>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "mywidget": {
+            "template": ".my-tripple-slider .product-items",
+            "slickOptions": {
+                "slidesToShow": 1,
+                "rows": 3,
+                "responsive": [
+                    {
+                        "breakpoint": 1200,
+                        "settings": {
+                            "slidesToShow": 1
+                        }
+                    },
+                    {
+                        "breakpoint": 767,
+                        "settings": {
+                            "slidesToShow": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>

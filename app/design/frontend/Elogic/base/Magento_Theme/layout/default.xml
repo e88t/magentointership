@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+
+        <!-- Header -->
+        <container name="switch.icon" label="Switch Icon" htmlTag="div" htmlClass="switch-icon" after="-" >
+            <block class="Magento\Framework\View\Element\Template" name="my-switch-trigger" template="Magento_Theme::my-switcher-trigger.phtml"/>
+        </container>
+        <move element="authorization-link" destination="header.icons.container" before="top.search"/>
+        <move element="wish-list-link" destination="header.icons.container" before="minicart" />
+        <move element="minicart" destination="header.icons.container" before="top.search" />
+        <move element="top.search" destination="header.icons.container" before="minicart" />
+        <move element="switch.icon" destination="header.icons.container" after="top.search" />
+
+        <move element="store_language" destination="setting.switchers" before="-" />
+        <move element="currency" destination="setting.switchers" before="-"/>
+
+        <move element="navigation.sections" destination="header-wrapper" before="header.icons.container"/>
+
+
+        <referenceBlock name="header.panel.wrapper" remove="true" />
+
+        <referenceContainer name="header-wrapper">
+            <container name="header.icons.container"  htmlTag="div" htmlClass="header-icons-container" after="-"/>
+            <container name="setting.site" label="Settings Site" htmlTag="div" htmlClass="settings-site" after="-">
+            <container name="setting.switchers" label="Settings Switchers" htmlTag="div" htmlClass="settings-switchers" before="-" />
+                <block class="Magento\Cms\Block\Block" name="block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">my-settings-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+
+
+<!--        <referenceBlock name="register-link" remove="true"/>-->
+
+        <move element="footer_links" destination="footer.company.links.wrapper" />
+
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="elogic.scroll.header" template="Magento_Theme::scroll-header-sticky.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="elogic.scroll.button" template="Magento_Theme::scroll-button-tmp.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="elogic.main.loader" template="Magento_Theme::main-loader.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="elogic.footer.accordion" template="Magento_Theme::footer-accordion.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="elogic.switcher.popup" template="Magento_Theme::switcher-popup.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="footer" >
+
+                <block class="Magento\Cms\Block\Block" name="my-footer-menu">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">my-footer-menu</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="my-footer-social">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">my-footer-social</argument>
+                    </arguments>
+                </block>
+                <container name="footer.company.links.wrapper" label="Footer Company Links Wrapper" htmlTag="div" htmlClass="footer-company-links-wrapper" />
+                <referenceBlock name="copyright" remove="true"/>
+                <referenceBlock name="footer_links" remove="true"/>
+            </referenceContainer>
+
+        <referenceBlock name="form.subscribe" remove="true" />
+    </body>
+</page>

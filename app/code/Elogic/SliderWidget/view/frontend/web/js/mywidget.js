@@ -1,7 +1,8 @@
 define([
     'jquery',
     'jquery-ui-modules/widget',
-    'slickSlider'
+    'slickSlider',
+    'loader'
 ], function ($) {
     'use strict';
 
@@ -43,6 +44,7 @@ define([
         _create: function () {
             var element = $(this.options.template);
             element.show();
+            element.trigger('processStart');
             this._initSlick($(this.options.template));
         },
 
@@ -51,6 +53,7 @@ define([
                 element.slick('unslick');
             }
             element.slick(this.options.slickOptions);
+            element.trigger('processStop');
         }
     });
     return $.elogic.carousel;

@@ -7,15 +7,5 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="content.bottom">
-            <container name="newsletter-section" htmlTag="div" htmlClass="newsletters container" before="footer">
-                <block class="Magento\Cms\Block\Block" name="my-custom-newsletter">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">my-custom-newsletter</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
-            </container>
-        </referenceContainer>
     </body>
 </page>

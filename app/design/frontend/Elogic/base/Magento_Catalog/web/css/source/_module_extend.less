@@ -3,7 +3,21 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
+    #home-slider-products{
+        .slick-track{
+            .slick-slide {
+                .product-image-container {
+                    min-width: 100%;
+                }
+                .product-item-photo, .product-item-photo-hover {
+                    min-width: 100%;
+                    .product-image-photo, .product-image-photo-hover {
+                        min-width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
@@ -11,5 +25,12 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
+    #home-slider-products{
+        .slick-track{
+            margin: 0 -15px;
+            .slick-slide {
+                padding: 0 15px;
+            }
+        }
+    }
 }

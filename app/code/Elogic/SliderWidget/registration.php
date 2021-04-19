@@ -2,4 +2,4 @@
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Elogic_CatalogWidget', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Elogic_SliderWidget', __DIR__);
