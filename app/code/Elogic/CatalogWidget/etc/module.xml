@@ -5,6 +5,5 @@
         <sequence>
             <module name="Magento_CatalogWidget"/>
         </sequence>
-
     </module>
 </config>
