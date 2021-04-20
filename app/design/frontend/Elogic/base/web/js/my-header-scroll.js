@@ -15,7 +15,6 @@ define([
                 media: '(min-width: 767px)',
                 entry: function () {
                     $(window).on('scroll',function(){
-                        console.log('000');
                         if ($(this).scrollTop() > 120){
                             $('.page-header').addClass("_sticky");
                         }

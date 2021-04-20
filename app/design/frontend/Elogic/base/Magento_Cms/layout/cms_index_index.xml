@@ -19,7 +19,12 @@
 
             <container name="subscription.popup.wrapper" label="Subscription Popup Wrapper" htmlTag="div" htmlId="my-custom-popup">
                 <block class="Elogic\NewslatterSubscription\Block\IsCustomerSubscribed" name="my-subscription-popup" template="Magento_Cms::subscription.phtml" />
-                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" template="Magento_Newsletter::subscribe.phtml"/>
+                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" template="Magento_Newsletter::subscribe.phtml">
+                    <arguments>
+                        <argument name="form_id" xsi:type="string">popup-newsletter-form</argument>
+                        <argument name="input_id" xsi:type="string">popup-newsletter-input</argument>
+                    </arguments>
+                </block>
             </container>
         </referenceContainer>
         <referenceContainer name="content.bottom">

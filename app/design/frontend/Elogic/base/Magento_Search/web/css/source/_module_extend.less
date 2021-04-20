@@ -25,13 +25,13 @@
         .minisearch {
             position: relative;
             #search {
-                background-color: @color-black;
-                color: @color-white;
+                .lib-css(background-color, @color-black);
+                .lib-css(color, @color-white);
                 margin: 0;
                 left: 0;
                 top: 0;
                 &::placeholder{
-                    color: @color-elogic-gray1;
+                    .lib-css(color, @color-elogic-gray1);
                 }
             }
             .action.search{

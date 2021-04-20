@@ -37,10 +37,12 @@
 
     .page-header{
         position: relative;
-        background-color: @color-white;
-        z-index: @z-index-1;
+        .lib-css(background-color, @color-white);
+        .lib-css(z-index, @z-index-1);
+
         .header-icons-container {
-            display: flex;
+            .lib-vendor-prefix-display(flex);
+
             .authorization-link {
                 .lib-font-size(@font-size__s);
                 letter-spacing: 1px;
@@ -49,6 +51,7 @@
             .wishlist.link {
                 padding-left: 15px;
                 display: inherit;
+
                 a {
                     .lib-font-size(@font-size__zero);
                     .lib-icon-font(
@@ -65,13 +68,15 @@
             .minicart-wrapper {
                 margin-left: 0;
                 margin-top: 0;
+
                 .action.showcart {
-                    display: inline;
+                    display: inline-block;
                     vertical-align: top;
-                    line-height: 1;
+
                     .text {
                         .lib-font-size(@font-size__s);
                         letter-spacing: 1px;
+                        vertical-align: top;
                     }
                 }
                 padding-left: 15px;
@@ -79,6 +84,7 @@
             .my-switcher-trigger {
                 line-height: 14px;
                 cursor: pointer;
+
                 i {
                     .lib-icon-font(
                         @_icon-font-content: "\f0c9";
@@ -102,6 +108,7 @@
                 line-height: 14px;
                 margin-left: 0;
                 padding-left: 15px;
+
                 .switcher-label {
                     display: none;
                     position: absolute;
@@ -123,16 +130,17 @@
         }
     }
     ._sticky.page-header {
-        z-index: @z-index-10;
+        .lib-css(z-index, @z-index-10);
         width: 100%;
         position: fixed;
-        background-color: @color-elogic-stickyHeader;
+        .lib-css(background-color, @color-elogic-stickyHeader);
         -webkit-animation-name: fadeInDown;
         -webkit-animation-duration: .5s;
         -webkit-animation-timing-function: linear;
         -webkit-animation-direction: normal;
         -webkit-animation-play-state: running;
         -webkit-animation-fill-mode: forwards;
+
         .sections.nav-sections {
             background-color: transparent;
         }
@@ -158,8 +166,9 @@
 
     //Footer
     .page-footer{
-        max-width: @layout-max-width;
+        .lib-css(max-width, @layout-max-width);
         margin: 0 auto;
+
         a {
             overflow: hidden;
             .lib-link(
@@ -177,16 +186,19 @@
     .footer-container{
         display: flex;
         padding: 100px 0 68px;
-        background-color: @color-white;
+        .lib-css(background-color, @color-white);
     }
     .footer-block{
         width: 25%;
         overflow: hidden;
+
         ul {
             margin: 0;
             padding: 0;
+
             li{
                 padding-bottom: 15px;
+
                 a {
                     position: relative;
                     padding: 0 10px 0 0;
@@ -228,40 +240,47 @@
         }
     }
     .footer-sub {
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: space-between;
         padding: 40px 0;
-        background: @color-white;
-        border-top: 1px solid @color-elogic-gray1;
+        .lib-css(background, @color-white);
+        .lib-css(border-top, 1px solid @color-elogic-gray1);
         .lib-css(font-weight, @font-weight__regular);
+
         &-list{
-            display: flex;
+            .lib-vendor-prefix-display(flex);
+
             li {
                 padding: 0 20px 0 5px;
+
                 a {
                     .lib-font-size(@font-size__s);
                     line-height: 1.8;
                     letter-spacing: 1px;
                     &:hover, &:before:hover {
-                        color: @color-elogic-black1;
+                        .lib-css(color, @color-elogic-black1);
                     }
                 }
             }
 
         }
         &-social{
-            display: flex;
+            .lib-vendor-prefix-display(flex);
+
             span {
                 padding-right: 30px;
                 text-transform: uppercase;
-                color: @color-elogic-gray1;
+                .lib-css(color, @color-elogic-gray1);
             }
+
             ul {
-                display: flex;
+                .lib-vendor-prefix-display(flex);
                 margin: 0;
                 padding: 0;
+
                 li {
                     padding: 0 20px 0 5px;
+
                     .fa-behance {
                         .lib-icon-font(
                             @_icon-font-content: "\f1b4";
@@ -335,9 +354,9 @@
         -ms-transition: all .3s ease;
         -o-transition: all .3s ease;
         transition: all .3s ease;
-        background: @color-elogic-black1;
-        color: @color-white;
-        z-index: @z-index-10;
+        .lib-css(background, @color-elogic-black1);
+        .lib-css(color, @color-white);
+        .lib-css(z-index, @z-index-10);
 
         .fa-angle-up {
             line-height: 47px;
@@ -393,8 +412,8 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .page-footer {
         .content{
-            width: @layout-max-width;
-            max-width: @layout-max-width;
+            .lib-css(width, @layout-max-width);
+            .lib-css(max-width, @layout-max-width);
         }
     }
 }
@@ -408,12 +427,13 @@
 
     .page-header {
         margin-bottom: 0;
-        z-index: @z-index-1;
+        .lib-css(z-index, @z-index-1);
     }
     .header.content {
-        display: flex;
+        .lib-vendor-prefix-display(flex);
         justify-content: center;
-        flex-wrap: wrap;
+        .lib-vendor-prefix-flex-wrap(wrap);
+
         .logo {
             width: 100%;
             margin-left: 0;
@@ -421,13 +441,14 @@
         .nav-toggle {
             top: 62px;
             &:before {
-                font-size: @font-size__xl-l;
+                .lib-font-size(@font-size__xl-l);
             }
         }
         .header-icons-container {
             width: 100%;
             justify-content: flex-end;
             padding-bottom: 10px;
+
             .authorization-link {
                 a {
                     .lib-font-size(@font-size__zero);
@@ -447,6 +468,9 @@
                         @_icon-font: @font-awesome,
                         @_icon-font-size: @font-size__base
                     );
+                    &:before {
+                        vertical-align: top;
+                    }
                     .text {
                         .lib-font-size(@font-size__zero);
                     }
@@ -460,49 +484,64 @@
     .page-footer {
         margin-top: 0;
     }
-    .footer-container{
+    .footer-container {
         padding: 20px 15px 38px;
-        flex-wrap: wrap;
+        .lib-vendor-prefix-flex-wrap(wrap);
+
         .footer-block {
             width: 100%;
+
             h3 {
                 margin-top: 30px;
                 margin-bottom: 15px;
                 .lib-font-size(@font-size__mms);
+                .lib-icon-font (
+                    @_icon-font-position: after,
+                    @_icon-font: @font-awesome,
+                    @_icon-font-content: "\f067",
+                    @_icon-font-color: @color-elogic-gray3,
+                    @_icon-font-size: @font-size__s,
+                    @_icon-font-line-height: 30px,
+                    @_icon-font-display: block
+                );
                 &:after {
-                    content: "\f067";
-                    font-family: @font-awesome;
-                    color: @color-elogic-gray3;
-                    .lib-font-size(@font-size__s);
-                    line-height: 30px;
                     width: 30px;
                     height: 30px;
                     text-align: center;
                     float: right;
-                    background: @color-elogic-gray4;
+                    .lib-css(background, @color-elogic-gray4);
                     cursor: pointer;
                 }
             }
             &.active {
-                h3::after {
-                    content: "\f068";
+                h3 {
+                    .lib-icon-font (
+                        @_icon-font-position: after,
+                        @_icon-font-content: "\f068",
+                        @_icon-font: @font-awesome,
+                        @_icon-font-line-height: 30px,
+                        @_icon-font-display: block
+                    );
                 }
             }
         }
     }
-    .footer-sub{
-        flex-direction: column;
+    .footer-sub {
+        .lib-vendor-prefix-flex-direction(column);
         padding: 40px 10px;
+
         &-list {
-            flex-wrap: wrap;
+            .lib-vendor-prefix-flex-wrap(wrap);
             justify-content: center;
             padding: 0;
+
             li {
                 padding: 0 10px 0 5px;
             }
         }
         &-social{
             justify-content: center;
+
             span{
                 .lib-font-size(@font-size__base);
                 line-height: 1.8;
@@ -511,6 +550,7 @@
                 display: inline-flex;
                 vertical-align: top;
                 padding: 0 10px 0 0;
+
                 a {
                     .lib-font-size(@font-size__ms);
                     line-height: 1.8;

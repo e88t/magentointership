@@ -237,7 +237,7 @@
             }
 
             &-description {
-                margin: @indent__m 0;
+                .lib-css(margin, @indent__m 0);
             }
 
             .product-reviews-summary {
@@ -246,35 +246,34 @@
                 }
 
                 .reviews-actions {
-                    font-size: @font-size__s;
+                    .lib-font-size(@font-size__s);
                     margin-top: 5px;
                 }
             }
 
             .price-box {
-                font-family: @font-family-oswald;
+                .lib-css(font-family, @font-family-oswald);
                 position: absolute;
                 transform: translateX(-50%);
                 left: 50%;
                 text-align: center;
                 opacity: 1;
-                margin: 0 0 @indent__m;
+                .lib-css(margin, 0 0 @indent__m);
 
                 .special-price{
                     display: inline-block;
-                    font-weight: @font-weight__bold;
+                    .lib-css(font-weight, @font-weight__bold);
                     white-space: nowrap;
                     display: inline-block;
                 }
 
                 .price {
                     display: inline-block;
-
                 }
 
                 .price-label {
                     display: none;
-                    font-size: @font-size__s;
+                    .lib-font-size(@font-size__s);
 
                     &:after {
                         content: ':';
@@ -286,7 +285,7 @@
             .minimal-price {
                 .price {
                     .lib-font-size(@font-size__l);
-                    font-weight: @font-weight__bold;
+                    .lib-css(font-weight, @font-weight__bold);
                 }
 
                 .price-wrapper {
@@ -306,7 +305,7 @@
             .old-price {
                 vertical-align: middle;
                 .price {
-                    font-weight: @font-size__l;
+                    .lib-font-size(@font-size__l);
                     text-decoration: line-through;
                 }
             }
@@ -483,12 +482,6 @@
                 transform: translateX(-50%);
                 opacity: 1;
             }
-            .product-item-photo {
-                display: none;
-            }
-            .product-item-photo-hover {
-                display: block;
-            }
         }
     }
 }
@@ -596,14 +589,14 @@
     .product {
         &-item {
             .products-grid & {
-                margin-bottom: @indent__l;
+                .lib-css(margin-bottom, @indent__l);
             }
 
             &-actions {
                 display: block;
 
                 .products-grid & {
-                    margin: @indent__s 0;
+                    .lib-css(margin, @indent__s 0);
                 }
 
                 .actions-primary + .actions-secondary {

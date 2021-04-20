@@ -14,14 +14,14 @@
             action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
             method="post"
             data-mage-init='{"validation": {"errorClass": "mage-error"}}'
-            id="newsletter-validate-detail">
+            id="<?= $block->getFormId() ? $block->getFormId() : 'newsletter-validate-detail'?>">
             <div class="field newsletter">
                 <div class="control">
                     <label for="newsletter">
                         <span class="label">
                             <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
                         </span>
-                        <input name="email" type="email" id="newsletter"
+                        <input name="email" type="email" id="<?= $block->getInputId() ? $block->getInputId() : 'newsletter'?>"
                                placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
                                data-mage-init='{"mage/trim-input":{}}'
                                data-validate="{required:true, 'validate-email':true}"

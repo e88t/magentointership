@@ -34,7 +34,7 @@
 
         //Header
         .mmenu-header{
-            display: flex;
+            .lib-vendor-prefix-display(flex);
             width: 1320px;
             &-block {
                 width: 33%;
@@ -74,7 +74,7 @@
                     position: absolute;
                     left: 17px;
                     top: 13px;
-                    z-index: @z-index-1;
+                    .lib-css(z-index, @z-index-1);
                 }
                 &:after {
                     content: '';
@@ -84,13 +84,12 @@
                     width: 50px;
                     height: 50px;
                     line-height: 50px;
-                    background: @color-white;
+                    .lib-css(background, @color-white);
                     border-radius: 100%;
                     display: inline-block;
                 }
             }
         }
-
         //Main content
         .navigation {
             .level0 {
@@ -124,7 +123,7 @@
                 &.current {
                     .nav-anchor {
                         background-color: transparent;
-                        color: @color-elogic-gray1
+                        .lib-css(color, @color-elogic-gray1);
                     }
                 }
                 .nav-anchor {
@@ -133,7 +132,7 @@
                 .submenu{
                     max-width: 100vw;
                     .submenu {
-                        background-color: @color-black;
+                        .lib-css(background-color, @color-black);
                     }
                     .mega-col {
                         .subitems-group {
@@ -176,7 +175,8 @@
                             @_icon-font-size: @font-size__xxxs;
                         );
                         &::before {
-                            .lib-css(font-style, normal);
+                            font-style: normal;
+                            .lib-css(font-style, @font-style__base);
                             .lib-css(font-weight, @font-weight__bold);
                             font-variant: normal;
                             text-transform: none;
@@ -203,15 +203,20 @@
             }
             .level1 {
                 .submenu-inner, .submenu {
-                    background-color: @color-black;
+                    .lib-css(background-color, @color-black);
                 }
                 .caret {
                     position: static;
                     width: 100%;
                     box-sizing: border-box;
+                    .lib-icon-font(
+                        @_icon-font-position: after,
+                        @_icon-font: @font-awesome,
+                        @_icon-font-content: "\f105",
+                        @_icon-font-display: inline
+                    );
                     &:after  {
-                        content: "\f105";
-                        font: normal normal normal 14px/1 FontAwesome;
+                        .lib-font-size(@font-size__base);
                         position: absolute;
                         line-height: 36px;
                         right: 0;
@@ -223,7 +228,7 @@
 
         //Footer
         .megamenu-footer {
-            border-top: 1px solid @color-elogic-menuborder;
+            .lib-css(border-top, 1px solid @color-elogic-menuborder);
         }
     }
 }
@@ -243,9 +248,9 @@
                 .ves-megamenu-mobile.my-menu {
                     left: -1px;
                     top: 0;
-                    background-color: @color-black;
+                    .lib-css(background-color, @color-black);
                     .ves-megamenu{
-                        background-color: @color-black;
+                        .lib-css(background-color, @color-black);
                         padding: 0 10px;
                         .nav-item {
                             border-top: none;
@@ -260,7 +265,7 @@
                             &.level0{
                                 &>a {
                                     .lib-css(color, @color-white);
-                                    border-bottom: 1px solid #333;
+                                    .lib-css(border-bottom, 1px solid @color-elogic-gray3);
                                 }
                             }
                         }
