@@ -1,0 +1,21 @@
+<?php
+/**
+ * @var \Elogic\NewslatterSubscription\Block\IsCustomerSubscribed $block;
+ */
+$_subscribeCustomerStatus = $block->isSubscribed();
+
+?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "myCustomPopup": {
+           "template": "#my-custom-popup",
+           "isCustomerSubscribed": <?= /* @noEscape */ $_subscribeCustomerStatus ? 'true' : 'false' ?>,
+            "modalOptions": {
+                "autoOpen": true,
+                "clickableOverlay": true
+            }
+        }
+    }
+}
+</script>

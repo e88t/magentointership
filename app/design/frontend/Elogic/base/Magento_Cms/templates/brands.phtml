@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Backend\Block\System\Store\Edit $block */
+
+?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "mywidget": {
+            "template": ".brand-slider",
+            "slickOptions": {
+                "slidesToShow": 5,
+                "dots": true,
+                    "responsive": [
+                    {
+                        "breakpoint": 1200,
+                        "settings": {
+                            "slidesToShow": 4
+                        }
+                    },
+                    {
+                        "breakpoint": 767,
+                        "settings": {
+                            "slidesToShow": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>

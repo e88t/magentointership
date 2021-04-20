@@ -1,0 +1,63 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        text-transform: uppercase;
+        .lib-font-size(@font-size__s);
+        letter-spacing: 1px;
+        .lib-css(font-weight, @font-weight__regular);
+        .lib-css(color, @color-elogic-black1);
+        line-height: 20px;
+        height: 20px;
+        &:not(.primary){
+            background: transparent;
+        }
+        &::before {
+            content: none;
+        }
+    }
+
+    .slick-prev {
+        &:active,
+        &:focus,
+        &:not(.primary) {
+            right: 70px;
+            left: auto;
+            border-right: 1px solid @color-elogic-black1;
+        }
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-list {
+        padding-top: 30px;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 35px;
+        li {
+            button {
+                border-radius: 0;
+                width: 10px;
+                height: 10px;
+                margin: 5px 4px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .slick-dots {
+        bottom: 5%;
+    }
+
+}

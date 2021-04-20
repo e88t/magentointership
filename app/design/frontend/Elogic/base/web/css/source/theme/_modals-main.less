@@ -1,0 +1,273 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .popup-authentication._inner-scroll {
+        display: none;
+    }
+
+    //
+    // Modal Switcher
+    //__________________________________
+
+    .sidebar-settings-popup {
+        .modal-inner-wrap {
+            .modal-header {
+                padding-bottom: 50px;
+                padding-top: 50px;
+
+                .action-close {
+                    left: 0;
+                    margin: 0;
+                    padding: 50px;
+                    &:before {
+                        .lib-font-size(@font-size__xl);
+                        line-height: 21px;
+                    }
+                    &:hover {
+                        &:before {
+                            .lib-css(color, @color-elogic-switcher);
+                        }
+                    }
+                }
+            }
+            .modal-content {
+                padding: 25px 50px;
+                height: ~'calc(100% - 100px)';
+                .settings-site {
+                    height: 100%;
+                    .lib-vendor-prefix-display(flex);
+                    justify-content: space-between;
+                    .lib-vendor-prefix-flex-direction(column);
+                    line-height: 2;
+
+                    .settings-switchers {
+                        .lib-vendor-prefix-display(flex);
+                    }
+                    .switcher {
+                        width: 50%;
+
+                        &-label {
+                            display: none;
+                        }
+                        &-trigger {
+                            strong {
+                                .lib-css(font-weight, @font-weight__regular);
+                                .lib-css(color, @color-elogic-switcher);
+                                text-transform: capitalize;
+                            }
+                        }
+                        &-dropdown {
+                            padding: 0;
+                            margin-top: 1rem;
+
+                            a {
+                                .lib-link(
+                                    @_link-color: @color-elogic-gray1,
+                                    @_link-color-hover: @color-elogic-switcher
+                                );
+                            }
+                        }
+                    }
+                    .settings-site-block {
+                        h3 {
+                            .lib-font-size(@font-size__l);
+                            .lib-css(color, @color-elogic-black1);
+                            .lib-css(font-weight, @font-weight__heavier);
+                        }
+                        .textwidget {
+                            .lib-font-size(@font-size__base);
+                            .lib-css(color, @color-elogic-gray1);
+
+                            a {
+                                display: block;
+                                .lib-link(
+                                    @_link-color: @color-elogic-gray1
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    // Modal Subscription
+    //__________________________________
+
+    .modals-overlay{
+        .lib-css(z-index, @z-index-8 ~'!important');
+    }
+    #my-custom-popup{
+        display: none;
+    }
+    .home-subscription-popup.modal-popup{
+        .modal-inner-wrap{
+            overflow: visible;
+            position: relative;
+            width: 50%;
+
+            .modal-header{
+                padding: 0;
+
+                .action-close {
+                    .lib-css(background, @color-elogic-black1);
+                    border-radius: 100%;
+                    height: 40px;
+                    position: absolute;
+                    right: -20px;
+                    text-align: center;
+                    top: -20px;
+                    width: 40px;
+                    margin: 0;
+                    .lib-icon-font(
+                        @_icon-font-content: "\f00d",
+                        @_icon-font: @font-awesome,
+                        @_icon-font-color: @color-white,
+                        @_icon-font-size: @font-size__base,
+                        @_icon-font-display: inline-block
+                    );
+                    &:before {
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .modal-footer {
+                display: none;
+            }
+
+            .modal-content {
+                padding: 0;
+
+                #my-custom-popup {
+                    position: relative;
+                    height: 540px;
+                    max-width: 970px;
+                    background-image: url("@{baseDir}images/bg-modal.jpg");
+
+                    .popup {
+                        &-block {
+                            position: absolute;
+                            top: 120px;
+                            right: 0;
+                            width: 50%;
+                            padding-right: 15px;
+                            box-sizing: border-box;
+                            &-title{
+                                .lib-css(font-weight, @font-weight__bold);
+                            }
+                            &-subtitle {
+                                .lib-css(color, @color-elogic-gray1);
+                                .lib-css(font-style, @font-style__emphasis);
+                                line-height: 1.5;
+                                margin-bottom: 30px;
+                            }
+                            &-subscribe {
+                                margin-top: 150px;
+                                .lib-css(color, @color-elogic-gray1);
+                            }
+                            pre {
+                                display: none;
+                            }
+                        }
+                    }
+                    .newsletter.block{
+                        max-width: 50%;
+                        width: 50%;
+                        position: absolute;
+                        right: 0;
+                        bottom: 150px;
+                        .lib-css(z-index, @z-index-1);
+
+                        .content {
+                            width: 100%;
+
+                            .form.subscribe {
+                                .lib-vendor-prefix-display(flex);
+                                .lib-vendor-prefix-flex-direction(column);
+                                padding-right: 15px;
+
+                                .field.newsletter {
+                                    margin-bottom: 30px;
+                                    max-width: 410px;
+
+                                    .control:before {
+                                        content: none;
+                                    }
+                                }
+                                input {
+                                    .lib-css(border, 1px solid @color-elogic-gray1);
+                                    max-width: 410px;
+                                    height: 40px;
+                                    line-height: 17px;
+                                    padding: 11px 10px;
+                                    .lib-css(background-color, @color-elogic-newsletter);
+                                    &::placeholder {
+                                        .lib-css(color, @color-elogic-gray1);
+                                    }
+                                }
+                                .primary {
+                                    .lib-font-size(@font-size__base);
+                                    .lib-css(font-weight, @font-weight__regular);
+                                    padding: 10px 25px;
+                                    line-height: 1.5;
+                                    text-transform: uppercase;
+                                    border: 0;
+                                    border-top-right-radius: 0;
+                                    border-bottom-right-radius: 0;
+                                    height: 40px;
+                                    margin-left: 0;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        &-title {
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            .lib-css(font-weight, @font-weight__semibold);
+                            .lib-font-size(@font-size__xxl);
+                            margin: 0;
+                        }
+                        &-subtitle {
+                            .lib-css(color, @color-elogic-gray1);
+                        }
+
+                        .newslatter-wrapper{
+                            .lib-vendor-prefix-display(flex);
+                            box-sizing: border-box;
+                            .lib-vendor-box-align (center);
+                            justify-content: space-between;
+                            .lib-css(max-width, @layout-max-width);
+                            margin: 0 auto;
+                            padding: 30px 5px 30px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .modal-slide.sidebar-settings-popup {
+        left: 75vw;
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .modal-slide.sidebar-settings-popup {
+        left: 0;
+    }
+}
