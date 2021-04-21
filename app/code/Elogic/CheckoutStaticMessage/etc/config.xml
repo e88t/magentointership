@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<default>
+    <checkoutstaticmessage>
+        <general>
+            <enable>0</enable>
+            <display_text>Complimentary shipping on orders over $200 + always free returns!</display_text>
+        </general>
+    </checkoutstaticmessage>
+</default>
+</config>
