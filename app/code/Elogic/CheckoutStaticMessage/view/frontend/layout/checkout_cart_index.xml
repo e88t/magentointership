@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <container name="checkout.static.message" htmlTag="div" htmlClass="subtitle-cart-message">
+            <block name="checkout-subtitle-message"
+                class="Magento\Framework\View\Element\Template"
+                template="Elogic_CheckoutStaticMessage::checkout-subtitle-message.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Elogic\CheckoutStaticMessage\ViewModel\CheckoutMessageViewModel
+                    </argument>
+                </arguments>
+            </block>
+        </container>
+        <move element="checkout.static.message" destination="content.top" after="page.main.title"/>
+
+        <referenceBlock name="page.main.title" remove="true" />
+
+        <referenceContainer name="content.top">
+            <block class="Magento\Framework\View\Element\Template" name="elogic.checkout.message" template="Elogic_CheckoutStaticMessage::cart-title.phtml" before="checkout.static.message">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Elogic\CheckoutStaticMessage\ViewModel\CheckoutMessageViewModel
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

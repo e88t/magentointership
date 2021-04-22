@@ -1,0 +1,6 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+    <div class="cart-subtitle">
+        <?php if ($block->getViewModel()->getItems()) {?>
+            <h2><?= $block->getViewModel()->getMessage() ?></h2>
+        <?php } ?>
+    </div>
