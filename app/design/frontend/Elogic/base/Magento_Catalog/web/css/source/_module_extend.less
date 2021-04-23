@@ -18,6 +18,106 @@
             }
         }
     }
+
+
+    //
+    //  Sorter and limiter
+    //  _____________________________________________
+
+    #sorter, .ui-selectmenu-menu {
+        display: none;
+    }
+
+    .ui-selectmenu-button {
+        font-size: 0;
+        max-width: 40px;
+        cursor: pointer;
+        line-height: 1;
+        vertical-align: super;
+        margin-bottom: 10px;
+
+        .lib-icon-font (
+            @_icon-font-position: after,
+            @_icon-font-content: "\f078",
+            @_icon-font: @font-awesome,
+            @_icon-font-size: @font-size__base,
+            @_icon-font-color: @color-gray46,
+            @_icon-font-color-hover: @color-gray20
+        );
+        &.ui-corner-top {
+            .lib-icon-font (
+                @_icon-font-position: after,
+                @_icon-font-content: "\f077",
+                @_icon-font: @font-awesome,
+                @_icon-font-size: @font-size__base,
+                @_icon-font-color: @color-gray46,
+                @_icon-font-color-hover: @color-gray20
+            );
+        }
+
+    }
+
+   .ui-selectmenu-menu.ui-selectmenu-open {
+        display: block;
+        .lib-css(z-index, @z-index-1);
+        width: 185px;
+
+        .ui-menu {
+            border-top: 15px solid transparent;
+            max-width: 100%;
+            margin-bottom: 0;
+            padding: 0;
+
+            &-item {
+                .lib-css(color, @color-white);
+                padding: 15px 0;
+                margin-bottom: 0;
+                text-align: center;
+                cursor: pointer;
+                border: 1px solid black;
+                background-image: linear-gradient(to top, #303030 50%, #000000 50%);
+                background-size: 100% 200%;
+                background-position: top;
+                transition: background-position 0.4s ease-in-out;
+                &:hover {
+                    .lib-css(border-color, @color-white);
+                    background-position: bottom;
+                }
+            }
+        }
+   }
+
+    .bottom-category-toolbar {
+
+        .toolbar-sorter {
+            display: none;
+        }
+
+        .toolbar-products.toolbar {
+            .field.limiter {
+                display: block;
+                text-align: end;
+
+                #limiter {
+                    display: none;
+                }
+            }
+        }
+
+        .ui-selectmenu {
+
+            &-button {
+            .lib-font-size(@font-size__base);
+            vertical-align: baseline;
+            margin-bottom: 0;
+            margin-right: 15px;
+            }
+
+            &-text {
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 //
