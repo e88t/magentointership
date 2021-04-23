@@ -1,4 +1,10 @@
 //
+//  Variables
+//  _____________________________________________
+@color-elogic-gray2: #555555;
+@font-family-oswald: 'Oswald';
+
+//
 //  Common
 //  _____________________________________________
 
@@ -14,7 +20,17 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .cart-subtitle h2 {
+        .lib-font-size(@font-size__l);
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
     .cart-subtitle h2 {
         .lib-font-size(@font-size__l);
     }
@@ -33,6 +49,4 @@
             .lib-font-size(@font-size__base);
         }
     }
-
-
 }

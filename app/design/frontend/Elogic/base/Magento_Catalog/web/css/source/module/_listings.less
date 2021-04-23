@@ -103,15 +103,15 @@
             }
 
             &-actions {
-                font-size: 0;
+                .lib-font-size(@font-size__zero);
 
                 > * {
-                    font-size: 1.4rem;
+                    .lib-font-size(@font-size__base);
                 }
 
                 .actions-secondary {
                     display: inline-block;
-                    font-size: 1.4rem;
+                    .lib-font-size(@font-size__base);
                     vertical-align: middle;
                     white-space: nowrap;
                     position: absolute;
@@ -119,7 +119,11 @@
                     left: 50%;
                     transform: translateX(-50%) translateY(-50%);
                     webkit-transform: translateX(-50%) translateY(-50%);
-                    z-index: 2;
+                    .lib-css(z-index, @z-index-1);
+
+                    >.towishlist, >.tocompare {
+                        opacity: 0;
+                    }
 
                     > button.action {
                         .lib-button-reset();
@@ -150,14 +154,14 @@
                             line-height: 43px;
                             height: 43px;
                             width: 60px;
-                            .lib-css(font-size, 16);
+                            .lib-css(font-size, @font-size__mms);
                             border-radius: 0;
                             margin: 0 auto;
                             text-align: center;
-                            color: @color-elogic-black1;
+                            .lib-css(color, @color-elogic-black1);
 
                             &:hover {
-                                color: @color-elogic-gray1;
+                                .lib-css(color, @color-elogic-gray1);
                                 text-decoration: none;
                             }
                         }
@@ -219,8 +223,8 @@
                     vertical-align: middle;
 
                     .tocart {
-                        font-family: @font-family-oswald;
-                        font-weight: 500;
+                        .lib-css(font-family, @font-family-oswald);
+                        .lib-css(font-weight, @font-weight__heavier);
                         letter-spacing: 1px;
                         opacity: 0;
                         position: absolute;
@@ -305,7 +309,7 @@
             .old-price {
                 vertical-align: middle;
                 .price {
-                    .lib-font-size(@font-size__l);
+                    .lib-font-size(@font-size__base);
                     text-decoration: line-through;
                 }
             }
@@ -361,7 +365,7 @@
 
     .price-container {
         .price {
-            .lib-font-size(@font-size__base);
+            .lib-font-size(@font-size__mms);
         }
 
         .price-including-tax + .price-excluding-tax,
