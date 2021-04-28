@@ -56,7 +56,7 @@
     }
     .category-images {
         &-section {
-            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-display();
         }
         &-wrapper {
             position: relative;
@@ -110,8 +110,8 @@
         }
 
         .product-item-info {
-            .lib-vendor-prefix-display(flex);
-            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-prefix-display();
+            .lib-vendor-prefix-flex-direction();
             .lib-vendor-box-align (center);
         }
     }
@@ -121,9 +121,9 @@
     //__________________________________
 
     .my-tripple-slider{
-        .lib-vendor-prefix-display(flex);
-        .lib-vendor-prefix-flex-direction(column);
-        .lib-vendor-prefix-flex-wrap(wrap);
+        .lib-vendor-prefix-display();
+        .lib-vendor-prefix-flex-direction();
+        .lib-vendor-prefix-flex-wrap();
 
         .product-items {
             display: none;     // block from js
@@ -134,7 +134,7 @@
 
             .product-item {
                 &-info {
-                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-display();
                 }
                 &-link {
                     text-align: left;
@@ -279,7 +279,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .header.content{
         .lib-css(max-width, @layout-max-width);
-        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-display();
 
         .logo {
             margin: 0 0 10px 40px;
@@ -407,7 +407,7 @@
             top: 15%;
         }
         &-section {
-            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-prefix-flex-direction();
         }
         &-title{
             .lib-font-size(@font-size__xl);
@@ -479,7 +479,7 @@
             top: 5%;
         }
         &-section {
-            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-prefix-flex-direction();
         }
         &-title{
             .lib-font-size(@font-size__base);

@@ -40,7 +40,7 @@
         box-shadow: 0 4px 2px -2px #ccc;
 
         .header-icons-container {
-            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-display();
 
             .authorization-link {
                 .lib-font-size(@font-size__s);
@@ -193,7 +193,7 @@
     }
     .footer-container{
         width: 100%;
-        display: flex;
+        .lib-vendor-prefix-display();
         .lib-css(background-color, @color-white);
     }
     .footer-block{
@@ -248,7 +248,7 @@
         }
     }
     .footer-sub {
-        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-display();
         justify-content: space-between;
         padding: 40px 0;
         .lib-css(background, @color-white);
@@ -256,7 +256,7 @@
         .lib-css(font-weight, @font-weight__regular);
 
         &-list{
-            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-display();
 
             li {
                 padding: 0 20px 0 5px;
@@ -273,7 +273,7 @@
 
         }
         &-social{
-            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-display();
 
             span {
                 padding-right: 30px;
@@ -282,13 +282,13 @@
             }
 
             ul {
-                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-display();
                 margin: 0;
                 padding: 0;
 
                 li {
                     padding: 0 20px 0 5px;
-                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-display();
                     .lib-vendor-box-align (center);
 
                     .fa-behance {
@@ -431,7 +431,7 @@
     }
     .header.content {
         justify-content: space-between;
-        align-items: center;
+        .lib-vendor-box-align(center)
     }
 
     .footer-container{
@@ -454,9 +454,9 @@
         .lib-css(z-index, @z-index-1);
     }
     .header.content {
-        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-display();
         justify-content: center;
-        .lib-vendor-prefix-flex-wrap(wrap);
+        .lib-vendor-prefix-flex-wrap();
 
         .logo {
             width: 100%;
@@ -513,11 +513,11 @@
         }
 
         .footer-sub {
-            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-prefix-flex-direction();
             padding: 40px 10px;
 
             &-list {
-                .lib-vendor-prefix-flex-wrap(wrap);
+                .lib-vendor-prefix-flex-wrap();
                 justify-content: center;
                 padding-right: 0;
 
@@ -580,7 +580,7 @@
     }
     .footer-container {
         padding: 20px 15px 38px;
-        .lib-vendor-prefix-flex-wrap(wrap);
+        .lib-vendor-prefix-flex-wrap();
 
         .footer-block {
             width: 100%;
