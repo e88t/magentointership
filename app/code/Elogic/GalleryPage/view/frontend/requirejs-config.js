@@ -1,8 +1,8 @@
 var config = {
     map: {
         '*': {
-            slickSlider: 'Elogic_SliderWidget/js/slick.min',
-            sliderWidget: 'Elogic_SliderWidget/js/slider-widget'
+            slickSlider: 'Elogic_GalleryPage/js/slick.min',
+            galleryWidget: 'Elogic_GalleryPage/js/gallery-widget'
         }
     },
     shim: {

@@ -78,6 +78,8 @@
         text-transform: uppercase;
         left: 20%;
         bottom: 20%;
+        letter-spacing: 1.2px;
+        text-underline-position: under;
         .lib-css(color, @color-elogic-black1);
         .lib-link(
             @_link-text-decoration: underline,
@@ -113,6 +115,43 @@
             .lib-vendor-prefix-display();
             .lib-vendor-prefix-flex-direction();
             .lib-vendor-box-align (center);
+        }
+    }
+
+    //
+    // Banner
+    //__________________________________
+    .banner {
+        &-block {
+            position: relative;
+            img {
+                object-fit: cover;
+                height: 150px;
+            }
+        }
+        &-title {
+            position: absolute;
+            top: 30%;
+            left: 100px;
+            margin: 0;
+            .lib-css(font-weight, @font-weight__semibold);
+        }
+        &-subtitle {
+            position: absolute;
+            top: 55%;
+            left: 100px;
+            text-transform: uppercase;
+        }
+        &-link {
+            position: absolute;
+            top: 43%;
+            right: 100px;
+            letter-spacing: 1.2px;
+            text-underline-position: under;
+            .lib-link(
+                @_link-text-decoration: underline,
+                @_link-text-decoration-hover: none
+            );
         }
     }
 
@@ -282,7 +321,7 @@
         .lib-vendor-prefix-display();
 
         .logo {
-            margin: 0 0 10px 40px;
+            margin: 0;
         }
 
         .navigation {
@@ -297,12 +336,17 @@
             padding-right: 15px;
         }
     }
+    .banner {
+        &-block {
+            margin: 50px 0;
+        }
+    }
 
     .my-tripple-slider {
         .lib-vendor-prefix-flex-direction(row);
 
         > div {
-            width: 47%;
+            width: 50%;
         }
         .product-items {
             .slick-prev, .slick-next {
@@ -345,7 +389,7 @@
         .lib-vendor-prefix-flex-direction(row);
 
         > div {
-            width: 31%;
+            width: 33%;
         }
     }
     .brand-section {
@@ -434,6 +478,19 @@
         }
     }
 
+    .banner {
+        &-title {
+            left: 20px;
+        }
+        &-subtitle {
+            left: 20px;
+            .lib-font-size(@font-size__ms);
+        }
+        &-link {
+            right: 20px;
+        }
+    }
+
     .my-tripple-slider {
         .product-item-name {
             margin-top: 0;
@@ -487,6 +544,19 @@
         &-descr {
             .lib-font-size(@font-size__xxs);
             margin-bottom: 5px;
+        }
+    }
+    .banner {
+        &-title {
+            top: 25%;
+        }
+        &-subtitle {
+            top: 50%;
+        }
+        &-link {
+            right: auto;
+            left: 20px;
+            top: 65%;
         }
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="block" >
+                <arguments>
+                    <argument name="block_id" xsi:type="string">gallery-page</argument>
+                </arguments>
+            </block>
+            <block class="Elogic\GalleryPage\Block\Index" name="gallerypage_index_index" template="Elogic_GalleryPage::index.phtml" />
+        </referenceContainer>
+    </body>
+</page>
