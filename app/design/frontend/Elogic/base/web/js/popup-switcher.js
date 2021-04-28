@@ -13,6 +13,7 @@ define([
                 modalClass: "sidebar-settings-popup",
                 responsive: true,
                 trigger: '.my-switcher-trigger',
+                innerScroll: false,
                 buttons: []
             }
         },

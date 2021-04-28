@@ -38,13 +38,13 @@
                 height: ~'calc(100% - 100px)';
                 .settings-site {
                     height: 100%;
-                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-display();
                     justify-content: space-between;
-                    .lib-vendor-prefix-flex-direction(column);
+                    .lib-vendor-prefix-flex-direction();
                     line-height: 2;
 
                     .settings-switchers {
-                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-prefix-display();
                     }
                     .switcher {
                         width: 50%;
@@ -108,7 +108,7 @@
         .modal-inner-wrap{
             overflow: visible;
             position: relative;
-            width: 50%;
+            width: 970px;
 
             .modal-header{
                 padding: 0;
@@ -145,7 +145,6 @@
                 #my-custom-popup {
                     position: relative;
                     height: 540px;
-                    max-width: 970px;
                     background-image: url("@{baseDir}images/bg-modal.jpg");
 
                     .popup {
@@ -157,7 +156,7 @@
                             padding-right: 15px;
                             box-sizing: border-box;
                             &-title{
-                                .lib-css(font-weight, @font-weight__bold);
+                                .lib-css(font-weight, @font-weight__semibold);
                             }
                             &-subtitle {
                                 .lib-css(color, @color-elogic-gray1);
@@ -186,8 +185,8 @@
                             width: 100%;
 
                             .form.subscribe {
-                                .lib-vendor-prefix-display(flex);
-                                .lib-vendor-prefix-flex-direction(column);
+                                .lib-vendor-prefix-display();
+                                .lib-vendor-prefix-flex-direction();
                                 padding-right: 15px;
 
                                 .field.newsletter {
@@ -237,7 +236,7 @@
                         }
 
                         .newslatter-wrapper{
-                            .lib-vendor-prefix-display(flex);
+                            .lib-vendor-prefix-display();
                             box-sizing: border-box;
                             .lib-vendor-box-align (center);
                             justify-content: space-between;

@@ -15,19 +15,21 @@ define([
             modalOptions:{
                 type: 'popup',
                 responsive: true,
-                modalClass: "home-subscription-popup"
+                modalClass: "home-subscription-popup",
+                innerScroll: true
             }
         },
 
         _create: function (){
             mediaCheck({
-                media: '(min-width: 767px)',
+                media: '(min-width: 1024px)',
                 entry: function () {
                     var element = $(this.options.template);
                     if (!this.options.isCustomerSubscribed) {
                         this._isShowSubscriptionPopup();
                         if (!($.cookie('cancel_popup') ) || ($.cookie('cancel_popup') !== 'true')){
                             this._initModal(element);
+                            $("body._has-modal").css('overflow', 'auto');
                         }
                     }
                 }.bind(this),
