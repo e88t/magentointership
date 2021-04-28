@@ -21,7 +21,7 @@ define([
 
         _create: function (){
             mediaCheck({
-                media: '(min-width: 767px)',
+                media: '(min-width: 1024px)',
                 entry: function () {
                     var element = $(this.options.template);
                     if (!this.options.isCustomerSubscribed) {

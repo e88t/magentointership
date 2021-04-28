@@ -16,7 +16,7 @@ define([
                 openedState: "active",
                 multipleCollapsible: true,
                 animate: {
-                    easing: "linear",
+                    easing: "easeOutCubic",
                     duration:"300"
                 }
             }
