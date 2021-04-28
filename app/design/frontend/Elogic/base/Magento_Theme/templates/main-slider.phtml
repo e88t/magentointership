@@ -15,7 +15,22 @@
             "slickOptions": {
                 "slidesToShow": 1,
                 "dots": true,
-                "arrows": false
+                "arrows": false,
+                "responsive": [
+                    {
+                        "breakpoint": 1024,
+                        "settings": {
+                            "slidesToShow": 1,
+                            "infinite": true
+                        }
+                    },
+                    {
+                        "breakpoint": 768,
+                        "settings": {
+                            "slidesToShow": 1
+                        }
+                    }
+                ]
             }
         }
     }

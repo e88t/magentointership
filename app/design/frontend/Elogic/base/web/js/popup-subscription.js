@@ -15,7 +15,8 @@ define([
             modalOptions:{
                 type: 'popup',
                 responsive: true,
-                modalClass: "home-subscription-popup"
+                modalClass: "home-subscription-popup",
+                innerScroll: true
             }
         },
 
@@ -28,6 +29,7 @@ define([
                         this._isShowSubscriptionPopup();
                         if (!($.cookie('cancel_popup') ) || ($.cookie('cancel_popup') !== 'true')){
                             this._initModal(element);
+                            $("body._has-modal").css('overflow', 'auto');
                         }
                     }
                 }.bind(this),
