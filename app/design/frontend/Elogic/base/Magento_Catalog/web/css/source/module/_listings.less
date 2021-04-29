@@ -522,13 +522,9 @@
             .product-item {
                 margin-left: 2%;
                 padding: 0;
-                width: calc(~'(100% - 6%) / 4');
+                width: calc(~'(100% - 4%) / 3');
 
                 &:nth-child(3n + 1) {
-                    margin-left: 2%;
-                }
-
-                &:nth-child(4n + 1) {
                     margin-left: 0;
                 }
             }
@@ -558,6 +554,19 @@
                     &:nth-child(3n + 1) {
                         margin-left: 0;
                     }
+                }
+            }
+        }
+    }
+
+
+    .catalog-category-view.page-products {
+        .product-item-info {
+            width: 100%;
+            .product-image-container {
+                min-width: 100%;
+                img {
+                    width: 100%;
                 }
             }
         }
